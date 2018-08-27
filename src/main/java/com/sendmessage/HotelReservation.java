@@ -7,6 +7,8 @@ import org.json.JSONObject;
 
 /**
  * A class to construct {@link JSONObject} for a hotel reservation with dummy data.
+ *
+ * <p> Unless stated otherwise, all fields are mandatory.
  */
 final class HotelReservation {
 
@@ -22,7 +24,8 @@ final class HotelReservation {
             .put(
                 "hotelAddress",
                 buildAddress("24, Vittal Mallya Road", "UB City", "Bengaluru", "Karnataka 560001"));
-    JSONObject roomInfo = new JSONObject().put("roomType", "Premium");
+    JSONObject roomInfo = new JSONObject()
+        .put("roomType", "Premium");  // roomType is optional
     JSONObject guestInfo1 = new JSONObject().put("guestName", "Lee Lee");
     JSONObject guestInfo2 = new JSONObject().put("guestName", "Shikha Jain");
 

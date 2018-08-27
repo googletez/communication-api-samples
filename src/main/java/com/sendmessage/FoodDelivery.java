@@ -7,6 +7,8 @@ import org.json.JSONObject;
 
 /**
  * A class to construct {@link JSONObject} for a food delivery receipt with dummy data.
+ *
+ * <p> Unless stated otherwise, all fields are mandatory.
  */
 final class FoodDelivery {
 
@@ -44,6 +46,12 @@ final class FoodDelivery {
                 .put("deliveryStatus", deliveryStatus)
                 .put("deliveryItems", deliveryItems)
                 .put("trackingDetails", trackingDetails)
+                .put(
+                    "originAddress",
+                    buildAddress(
+                        " No. 3, RMZ Infinity - Tower E, Swamy Vivekananda Rd", "Bengaluru",
+                        "Karnataka 560001"))
+                // originAddress is optional
                 .put(
                     "destinationAddress",
                     buildAddress(

@@ -7,6 +7,8 @@ import org.json.JSONObject;
 
 /**
  * A class to construct {@link JSONObject} for a train ticket with dummy data.
+ *
+ * <p> Unless stated otherwise, all fields are mandatory.
  */
 final class TrainTicket {
 

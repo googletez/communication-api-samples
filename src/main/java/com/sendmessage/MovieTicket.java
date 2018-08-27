@@ -7,6 +7,8 @@ import org.json.JSONObject;
 
 /**
  * A class to construct {@link JSONObject} for a movie ticket with dummy data.
+ *
+ * <p> Unless stated otherwise, all fields are mandatory.
  */
 final class MovieTicket {
 
@@ -21,7 +23,7 @@ final class MovieTicket {
     JSONObject movieInfo =
         new JSONObject()
             .put("movieName", "Jurassic World: Fallen Kingdom")
-            .put("contentRating", "U/A");
+            .put("contentRating", "U/A");  // Optional
     JSONObject seat1 = new JSONObject().put("seatType", "CLASSIC").put("seatNumber", "E9");
     JSONObject seat2 = new JSONObject().put("seatType", "CLASSIC").put("seatNumber", "E10");
     return new JSONObject()
@@ -33,7 +35,7 @@ final class MovieTicket {
                 .put("movieTheatreInfo", movieTheatreInfo)
                 .put("movieInfo", movieInfo)
                 .put("screenName", "AUDI 03")
-                .put("qrCode", "qr code")
+                .put("qrCode", "qr code")  // Optional
                 .put("startTime", "2018-06-07T22:00:00Z")
                 .put("seatInfo", new JSONArray().put(seat1).put(seat2)));
   }
